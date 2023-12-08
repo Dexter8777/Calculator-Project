@@ -15,5 +15,13 @@ const subtract = function(...num){
     return result;
 }
 
+const multiply = function(...num){
+    result = num.reduce((previousNum, currentNum) => {
+        let total = previousNum * currentNum;
+        return total;
+    })
+    return result;
+}
 console.log(add(5, 8));
 console.log(subtract(30, 8, 2));
+console.log(multiply(2, 4, 4, 2))
