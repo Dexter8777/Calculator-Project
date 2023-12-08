@@ -1,8 +1,19 @@
+
 const add = function(...num){
-    return num.reduce((previousNum, currentNum) => {
+    result = num.reduce((previousNum, currentNum) => {
         let total = previousNum + currentNum;
         return total;
     })
+    return result;
 };
 
-console.log(add(4, 5, 6, 7));
+const subtract = function(...num){
+    result = num.reduce((previousNum, currentNum) => {
+        let total = previousNum - currentNum;
+        return total;
+    })
+    return result;
+}
+
+console.log(add(5, 8));
+console.log(subtract(30, 8, 2));
