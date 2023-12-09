@@ -1,6 +1,6 @@
 
 const add = function(...num){
-    result = num.reduce((previousNum, currentNum) => {
+    const result = num.reduce((previousNum, currentNum) => {
         const total = previousNum + currentNum;
         return total;
     })
@@ -8,7 +8,7 @@ const add = function(...num){
 };
 
 const subtract = function(...num){
-    result = num.reduce((previousNum, currentNum) => {
+    const result = num.reduce((previousNum, currentNum) => {
         const total = previousNum - currentNum;
         return total;
     })
@@ -16,7 +16,7 @@ const subtract = function(...num){
 }
 
 const multiply = function(...num){
-    result = num.reduce((previousNum, currentNum) => {
+    const result = num.reduce((previousNum, currentNum) => {
         const total = previousNum * currentNum;
         return total;
     })
@@ -24,13 +24,18 @@ const multiply = function(...num){
 }
 
 const divide = function(...num){
-    result = num.reduce((previousNum, currentNum) => {
+    const result = num.reduce((previousNum, currentNum) => {
         const total = previousNum / currentNum;
         return total;
     })
     return result;
 
 }
+
+let firstNum;
+let operator;
+let secondNum;
+
 console.log(add(5, 8));
 console.log(subtract(30, 8, 2));
 console.log(multiply(2, 4, 4, 2))
