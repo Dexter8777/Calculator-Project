@@ -45,6 +45,9 @@ let operator = {
 
 let secondNum = 5;
 
+const operate = function(op, num1, num2){
+    return op(num1, num2);
+}
 
 console.log('Operate Function testing\n');
 console.log(operate(operator['+'], firstNum, secondNum));
