@@ -36,22 +36,24 @@ const divide = function(...num){
 
 
 let firstNum = 3;
-let operator = {
+let secondNum = 5;
+const operator = {
     '+' : add,
     '-' : subtract,
     '*' : multiply,
     '/' : divide
 };
 
-let secondNum = 5;
+
 
 const operate = function(op, num1, num2){
-    return op(num1, num2);
+    let operand = operator[op];
+    return operand(num1, num2);
 }
 
 console.log('Operate Function testing\n');
-console.log(operate(operator['+'], firstNum, secondNum));
-console.log(operate(operator['*'], firstNum, secondNum));
+console.log(operate('+', firstNum, secondNum));
+console.log(operate('*', firstNum, secondNum));
 console.log('');
 
 console.log("Simple operator testing")
