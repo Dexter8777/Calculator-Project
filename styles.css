@@ -11,3 +11,7 @@ h1{
     border-radius: 10px;
     margin: auto;
 }
+
+.result-display{
+    border: 2px solid #000000;
+}
