@@ -1,3 +1,7 @@
+h1{
+    text-align: center;
+}
+
 .calculator-container{
     border: 2px solid #000000;
     display: flex;
