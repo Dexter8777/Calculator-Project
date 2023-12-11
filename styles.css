@@ -2,4 +2,5 @@
     border: 2px solid #000000;
     display: flex;
     padding: 20px;
+    width: fit-content;
 }
