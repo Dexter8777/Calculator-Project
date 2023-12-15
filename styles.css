@@ -29,7 +29,6 @@ h1{
 }
 
 .num_buttons{
-    border: 2px solid black;
     display: flex;
     width: 120px;
     flex-wrap: wrap;
