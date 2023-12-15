@@ -27,3 +27,8 @@ h1{
     width: 350px;
     display: flex;
 }
+
+.btn{
+   width: 35px;
+   height: 35px; 
+}
