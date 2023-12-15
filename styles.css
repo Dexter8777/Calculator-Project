@@ -12,6 +12,7 @@ h1{
     width: fit-content;
     border-radius: 10px;
     margin: auto;
+    gap: 30px;
 }
 
 .result-display{
@@ -20,3 +21,4 @@ h1{
     height: 50px;
     border-radius: 10px;
 }
+
