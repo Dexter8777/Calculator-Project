@@ -22,3 +22,6 @@ h1{
     border-radius: 10px;
 }
 
+.buttons{
+    border: 2px solid black;
+}
