@@ -33,7 +33,12 @@ h1{
     display: flex;
     width: 120px;
     flex-wrap: wrap;
-    gap: 5px;
+    padding: 0 5px;
+    gap: 7px;
+}
+
+.num:last-child{
+    flex-grow: 1;
 }
 
 .btn{
