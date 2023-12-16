@@ -39,7 +39,7 @@ h1{
 .operator_buttons{
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 5px;
 }
 
 .extra_buttons{
