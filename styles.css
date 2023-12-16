@@ -36,6 +36,11 @@ h1{
     gap: 7px;
 }
 
+.operator_buttons{
+    border: 1px solid black;
+    display: flex;
+}
+
 .num:last-child{
     flex-grow: 1;
 }
@@ -45,3 +50,5 @@ h1{
    height: 35px;
    border-radius: 5px; 
 }
+
+
