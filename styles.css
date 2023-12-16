@@ -23,7 +23,6 @@ h1{
 }
 
 .buttons{
-    border: 2px solid black;
     width: 350px;
     display: flex;
     gap: 2px;
