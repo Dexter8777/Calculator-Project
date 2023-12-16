@@ -41,6 +41,10 @@ const displayContent = function(btn){
     resultsDisplay.append(btn.textContent)
 }
 
+numOne.addEventListener('click', ()=>{
+    displayContent(numOne);
+});
+
 let firstNum = 3;
 let secondNum = 5;
 let operator = '+';
