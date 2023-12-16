@@ -30,7 +30,7 @@ h1{
 
 .num_buttons{
     display: flex;
-    width: 180px;
+    width: 175px;
     flex-wrap: wrap;
     align-content:flex-start;
     gap: 5px;
