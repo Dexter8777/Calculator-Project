@@ -1,6 +1,9 @@
+body{
+    font-family: 'Roboto', Times, serif; 
+}
+
 h1{
     text-align: center;
-    font-family: 'Roboto', Times, serif; 
 }
 
 .calculator-container{
