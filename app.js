@@ -37,6 +37,10 @@ const divide = function(...num){
 const numOne = document.querySelector('.one');
 const resultsDisplay = document.querySelector('.result-display');
 
+const displayContent = function(btn){
+    resultsDisplay.append(btn.textContent)
+}
+
 let firstNum = 3;
 let secondNum = 5;
 let operator = '+';
