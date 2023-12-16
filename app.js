@@ -35,6 +35,7 @@ const divide = function(...num){
 // ----------------------------------------------------------------------
 
 const numOne = document.querySelector('.one');
+const resultsDisplay = document.querySelector('.result-display');
 
 let firstNum = 3;
 let secondNum = 5;
