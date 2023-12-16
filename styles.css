@@ -43,7 +43,6 @@ h1{
 }
 
 .extra_buttons{
-    border: 1px solid black;
     display:flex;
     flex-grow: 1;
 }
