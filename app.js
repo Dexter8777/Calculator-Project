@@ -34,7 +34,9 @@ const divide = function(...num){
 
 // ----------------------------------------------------------------------
 
-const numOne = document.querySelector('.one');
+// Display Content
+
+const nums = document.querySelectorAll('.num');
 const resultsDisplay = document.querySelector('.result-display');
 
 const displayContent = function(btn){
@@ -44,6 +46,8 @@ const displayContent = function(btn){
 numOne.addEventListener('click', ()=>{
     displayContent(numOne);
 });
+
+// ----------------------------------------------------------------------
 
 let firstNum = 3;
 let secondNum = 5;
