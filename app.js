@@ -49,6 +49,14 @@ numButtons.forEach((btn) => {
     })
 })
 
+operatorButtons.forEach((btn) => {
+    btn.addEventListener('click', ()=>{
+        // displayValue.push(btn.textContent);
+        resultsDisplay.append(btn.textContent);
+        // console.log(displayValue);
+    })
+})
+
 // const displayContent = function(btn){
 //     resultsDisplay.append(btn.textContent)
 // }
