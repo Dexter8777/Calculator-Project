@@ -38,10 +38,13 @@ const divide = function(...num){
 
 const numButtons = document.querySelectorAll('.num');
 const resultsDisplay = document.querySelector('.result-display');
+let displayValue = [];
 
 numButtons.forEach((btn) => {
     btn.addEventListener('click', ()=>{
+        displayValue.push(btn.textContent);
         resultsDisplay.append(btn.textContent);
+        // console.log(displayValue);
     })
 })
 
