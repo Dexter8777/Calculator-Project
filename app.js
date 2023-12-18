@@ -37,6 +37,7 @@ const divide = function(...num){
 // Display Content
 
 const numButtons = document.querySelectorAll('.num');
+const operatorButtons = document.querySelectorAll('.operator');
 const resultsDisplay = document.querySelector('.result-display');
 let displayValue = [];
 
