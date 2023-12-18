@@ -63,6 +63,9 @@ operatorButtons.forEach((btn) => {
 
 // ----------------------------------------------------------------------
 
+// Operate
+
+const equals = document.querySelector('.equals');
 let firstNum = 3;
 let secondNum = 5;
 let operator = '+';
