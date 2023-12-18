@@ -36,16 +36,18 @@ const divide = function(...num){
 
 // Display Content
 
-const nums = document.querySelectorAll('.num');
+const numButtons = document.querySelectorAll('.num');
 const resultsDisplay = document.querySelector('.result-display');
 
-const displayContent = function(btn){
-    resultsDisplay.append(btn.textContent)
-}
+numButtons.forEach((btn) => {
+    btn.addEventListener('click', ()=>{
+        resultsDisplay.append(btn.textContent);
+    })
+})
 
-numOne.addEventListener('click', ()=>{
-    displayContent(numOne);
-});
+// const displayContent = function(btn){
+//     resultsDisplay.append(btn.textContent)
+// }
 
 // ----------------------------------------------------------------------
 
