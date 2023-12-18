@@ -51,7 +51,6 @@ h1{
 }
 
 
-
 .grow{
     flex-grow: 1;
 }
@@ -60,6 +59,7 @@ h1{
    width: 55px;
    height: 55px;
    border-radius: 5px; 
+   font-size: 20px;
 }
 
 
