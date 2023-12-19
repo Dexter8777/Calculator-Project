@@ -39,7 +39,7 @@ const divide = function(...num){
 const numButtons = document.querySelectorAll('.num');
 const operatorButtons = document.querySelectorAll('.operator');
 const resultsDisplay = document.querySelector('.result-display');
-const clear = document.querySelector('.clear');
+
 let displayValue = [];
 let operator = [];
 
@@ -69,11 +69,16 @@ operatorButtons.forEach((btn) => {
 // Operate
 
 const equals = document.querySelector('.equals');
+const clear = document.querySelector('.clear');
+
 equals.addEventListener('click', ()=>{
     resultsDisplay.replaceChildren();
     resultsDisplay.append(operate(operator[0], displayValue[0], displayValue[1]));
 })
 
+clear.addEventListener('click', ()=>{
+    resultsDisplay.replaceChildren();
+})
 
 let firstNum = 3;
 let secondNum = 5;
