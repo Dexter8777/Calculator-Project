@@ -78,6 +78,8 @@ equals.addEventListener('click', ()=>{
 
 clear.addEventListener('click', ()=>{
     resultsDisplay.replaceChildren();
+    displayValue = [];
+    operator = [];
 })
 
 let firstNum = 3;
