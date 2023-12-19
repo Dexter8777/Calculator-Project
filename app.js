@@ -69,7 +69,7 @@ operatorButtons.forEach((btn) => {
 
 const equals = document.querySelector('.equals');
 equals.addEventListener('click', ()=>{
-
+    resultsDisplay.replaceChildren();
 })
 
 
