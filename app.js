@@ -40,6 +40,7 @@ const numButtons = document.querySelectorAll('.num');
 const operatorButtons = document.querySelectorAll('.operator');
 const resultsDisplay = document.querySelector('.result-display');
 let displayValue = [];
+let operator = [];
 
 numButtons.forEach((btn) => {
     btn.addEventListener('click', ()=>{
@@ -51,6 +52,7 @@ numButtons.forEach((btn) => {
 
 operatorButtons.forEach((btn) => {
     btn.addEventListener('click', ()=>{
+        operator.push(btn.textContent);
         // displayValue.push(btn.textContent);
         resultsDisplay.append(btn.textContent);
         // console.log(displayValue);
@@ -66,9 +68,14 @@ operatorButtons.forEach((btn) => {
 // Operate
 
 const equals = document.querySelector('.equals');
+equals.addEventListener('click', ()=>{
+
+})
+
+
 let firstNum = 3;
 let secondNum = 5;
-let operator = '+';
+// let operator = '+';
 const operators = {
     '+' : add,
     '-' : subtract,
@@ -86,6 +93,7 @@ const operate = function(op, num1, num2){
 console.log('Operate Function testing\n');
 console.log(operate(operator, firstNum, secondNum));
 console.log(operate('*', firstNum, secondNum));
+
 console.log('');
 
 console.log("Simple operator testing")
