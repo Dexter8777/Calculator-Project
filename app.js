@@ -70,6 +70,7 @@ operatorButtons.forEach((btn) => {
 const equals = document.querySelector('.equals');
 equals.addEventListener('click', ()=>{
     resultsDisplay.replaceChildren();
+    resultsDisplay.append(operate(operator[0], displayValue[0], displayValue[1]));
 })
 
 
@@ -89,6 +90,8 @@ const operate = function(op, num1, num2){
     // Call one of the operator functions in the operators object on two numbers
     return operators[op](num1, num2);
 }
+
+
 
 console.log('Operate Function testing\n');
 console.log(operate(operator, firstNum, secondNum));
