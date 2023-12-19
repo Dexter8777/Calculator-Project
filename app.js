@@ -88,6 +88,8 @@ const operators = {
 
 const operate = function(op, num1, num2){
     // Call one of the operator functions in the operators object on two numbers
+    num1 = +num1;
+    num2 = +num2;
     return operators[op](num1, num2);
 }
 
