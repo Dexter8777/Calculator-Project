@@ -53,10 +53,19 @@ numButtons.forEach((btn) => {
 
 operatorButtons.forEach((btn) => {
     btn.addEventListener('click', ()=>{
-        operator.push(btn.textContent);
+
+        if(btn.id == 'times'){
+            operator.push('*');
+        } else if (btn.id == 'divide'){
+            operator.push('/')
+        } else {
+            operator.push(btn.textContent);
+        }
+        
         // displayValue.push(btn.textContent);
         resultsDisplay.append(btn.textContent);
-        // console.log(displayValue);
+        console.log(operator);
+        console.log(btn.id);
     })
 })
 
