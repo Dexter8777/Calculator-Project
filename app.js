@@ -83,6 +83,8 @@ const clear = document.querySelector('.clear');
 equals.addEventListener('click', ()=>{
     resultsDisplay.replaceChildren();
     resultsDisplay.append(operate(operator[0], displayValue[0], displayValue[1]));
+    displayValue = [];
+    operator = [];
 })
 
 clear.addEventListener('click', ()=>{
@@ -109,7 +111,6 @@ const operate = function(op, num1, num2){
     num2 = +num2;
     return operators[op](num1, num2);
 }
-
 
 
 console.log('Operate Function testing\n');
