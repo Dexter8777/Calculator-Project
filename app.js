@@ -47,7 +47,6 @@ numButtons.forEach((btn) => {
     btn.addEventListener('click', ()=>{
         displayValue.push(btn.textContent);
         resultsDisplay.append(btn.textContent);
-        // console.log(displayValue);
     })
 })
 
@@ -62,18 +61,9 @@ operatorButtons.forEach((btn) => {
             operator.push(btn.textContent);
         }
         
-        // displayValue.push(btn.textContent);
         resultsDisplay.append(btn.textContent);
-        console.log(operator);
-        console.log(btn.id);
     })
 })
-
-// const displayContent = function(btn){
-//     resultsDisplay.append(btn.textContent)
-// }
-
-// ----------------------------------------------------------------------
 
 // Operate
 
@@ -124,7 +114,7 @@ const operate = function(ops, numbers){
         newNumArray.unshift(finalResult);
     });
 
-        return finalResult;
+    return finalResult;
 }
 
 
@@ -134,11 +124,3 @@ console.log('Operate Function testing\n');
 console.log(operate(['*', '+'], ['2', '3', '5']));
 console.log(operate(['+', '-'], ['3', '7', '2']));
 console.log(operate(['/', '*', '-', '+'], ['4', '2', '4', '3', '4']));
-
-console.log('');
-
-console.log("Simple operator testing")
-console.log(add(5, 8));
-console.log(subtract(30, 8, 2));
-console.log(multiply(2, 4, 4, 2));
-console.log(divide(5, 2));
