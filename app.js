@@ -82,7 +82,7 @@ const clear = document.querySelector('.clear');
 
 equals.addEventListener('click', ()=>{
     resultsDisplay.replaceChildren();
-    resultsDisplay.append(operate(operator[0], displayValue[0], displayValue[1]));
+    resultsDisplay.append(operate(operator, displayValue));
     displayValue = [];
     operator = [];
 })
@@ -104,18 +104,36 @@ const operators = {
 };
 
 
+const operate = function(ops, numbers){
+    let finalResult = 0;
 
-const operate = function(op, num1, num2){
-    // Call one of the operator functions in the operators object on two numbers
-    num1 = +num1;
-    num2 = +num2;
-    return operators[op](num1, num2);
+    const newNumArray = numbers.map(num => {
+        return Number(num);
+    })
+
+    /* Loops through each operator using the first operator to perform the calculation
+    on the first two numbers,
+
+    Will then remove those first two numbers and append the result of the calculation
+    to be used in the next calculation with the next number.
+    */
+    
+    ops.forEach((op) => {
+        finalResult = operators[op](newNumArray[0], newNumArray[1])
+        newNumArray.splice(0, 2);
+        newNumArray.unshift(finalResult);
+    });
+
+        return finalResult;
 }
 
 
 console.log('Operate Function testing\n');
-console.log(operate(operator, firstNum, secondNum));
-console.log(operate('*', firstNum, secondNum));
+// console.log(operate(operator, firstNum, secondNum));
+// console.log(operate('*', firstNum, secondNum));
+console.log(operate(['*', '+'], ['2', '3', '5']));
+console.log(operate(['+', '-'], ['3', '7', '2']));
+console.log(operate(['/', '*', '-', '+'], ['4', '2', '4', '3', '4']));
 
 console.log('');
 
