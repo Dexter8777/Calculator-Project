@@ -41,7 +41,7 @@ const operatorButtons = document.querySelectorAll('.operator');
 const resultsDisplay = document.querySelector('.result-display');
 
 let displayValue = '';
-let operator = [];
+let operator = '';
 
 numButtons.forEach((btn) => {
     btn.addEventListener('click', ()=>{
@@ -54,13 +54,13 @@ operatorButtons.forEach((btn) => {
     btn.addEventListener('click', ()=>{
 
         if(btn.id == 'times'){
-            operator.push('*');
+            operator += '*';
             displayValue += btn.textContent;
         } else if (btn.id == 'divide'){
-            operator.push('/');
+            operator += '/';
             displayValue += btn.textContent;
         } else {
-            operator.push(btn.textContent);
+            operator += btn.textContent;
             displayValue += btn.textContent;
         }
         
@@ -86,9 +86,6 @@ clear.addEventListener('click', ()=>{
     operator = [];
 })
 
-let firstNum = 3;
-let secondNum = 5;
-// let operator = '+';
 const operators = {
     '+' : add,
     '-' : subtract,
@@ -100,7 +97,10 @@ const operators = {
 const operate = function(ops, numbers){
     let finalResult = 0;
 
+    // remove all characters that are not numbers
     numbers = numbers.split(/[^\d]/g);
+    ops = ops.split('');
+
     const newNumArray = numbers.map(num => {
         return Number(num);
     })
@@ -121,9 +121,10 @@ const operate = function(ops, numbers){
     return finalResult;
 }
 
-displayValue = '33+20'
-displayValue = displayValue.split(/[^\d]/g);
-console.log(displayValue);
+let ops = '+-*/'
+ops += '-'
+ops = ops.split('');
+console.log(ops);
 
 
 
