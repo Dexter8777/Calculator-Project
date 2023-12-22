@@ -75,15 +75,16 @@ const clear = document.querySelector('.clear');
 
 equals.addEventListener('click', ()=>{
     resultsDisplay.replaceChildren();
-    resultsDisplay.append(operate(operator, displayValue));
+
+    if (operator && displayValue){
+        resultsDisplay.append(operate(operator, displayValue));
+    };
+    
     displayValue = '';
     displayValue += resultsDisplay.textContent;
     operator = '';
 })
 
-equals.addEventListener('dblclick', () => {
-    resultsDisplay.replaceChildren();
-})
 
 clear.addEventListener('click', ()=>{
     resultsDisplay.replaceChildren();
