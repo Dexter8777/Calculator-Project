@@ -40,12 +40,12 @@ const numButtons = document.querySelectorAll('.num');
 const operatorButtons = document.querySelectorAll('.operator');
 const resultsDisplay = document.querySelector('.result-display');
 
-let displayValue = [];
+let displayValue = '';
 let operator = [];
 
 numButtons.forEach((btn) => {
     btn.addEventListener('click', ()=>{
-        displayValue.push(btn.textContent);
+        displayValue += btn.textContent;
         resultsDisplay.append(btn.textContent);
     })
 })
@@ -55,10 +55,13 @@ operatorButtons.forEach((btn) => {
 
         if(btn.id == 'times'){
             operator.push('*');
+            displayValue += btn.textContent;
         } else if (btn.id == 'divide'){
-            operator.push('/')
+            operator.push('/');
+            displayValue += btn.textContent;
         } else {
             operator.push(btn.textContent);
+            displayValue += btn.textContent;
         }
         
         resultsDisplay.append(btn.textContent);
@@ -97,6 +100,7 @@ const operators = {
 const operate = function(ops, numbers){
     let finalResult = 0;
 
+    numbers = numbers.split(/[^\d]/g);
     const newNumArray = numbers.map(num => {
         return Number(num);
     })
@@ -116,6 +120,11 @@ const operate = function(ops, numbers){
 
     return finalResult;
 }
+
+displayValue = '33+20'
+displayValue = displayValue.split(/[^\d]/g);
+console.log(displayValue);
+
 
 
 console.log('Operate Function testing\n');
