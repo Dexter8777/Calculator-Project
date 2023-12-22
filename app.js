@@ -76,6 +76,7 @@ const clear = document.querySelector('.clear');
 equals.addEventListener('click', ()=>{
     resultsDisplay.replaceChildren();
 
+    // Only append to display if both variables have a value
     if (operator && displayValue){
         resultsDisplay.append(operate(operator, displayValue));
     };
@@ -124,6 +125,7 @@ const operate = function(ops, numbers){
         newNumArray.unshift(finalResult);
     });
 
+    if (finalResult == 'Infinity') finalResult = 'ERROR';
     return finalResult;
 };
 
