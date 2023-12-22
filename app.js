@@ -81,6 +81,10 @@ equals.addEventListener('click', ()=>{
     operator = '';
 })
 
+equals.addEventListener('dblclick', () => {
+    resultsDisplay.replaceChildren();
+})
+
 clear.addEventListener('click', ()=>{
     resultsDisplay.replaceChildren();
     displayValue = '';
