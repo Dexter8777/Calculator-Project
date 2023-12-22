@@ -119,18 +119,9 @@ const operate = function(ops, numbers){
     });
 
     return finalResult;
-}
-
-let ops = '+-*/'
-ops += '-'
-ops = ops.split('');
-console.log(ops);
+};
 
 
 
 console.log('Operate Function testing\n');
-// console.log(operate(operator, firstNum, secondNum));
-// console.log(operate('*', firstNum, secondNum));
-console.log(operate(['*', '+'], ['2', '3', '5']));
-console.log(operate(['+', '-'], ['3', '7', '2']));
-console.log(operate(['/', '*', '-', '+'], ['4', '2', '4', '3', '4']));
+console.log(operate('*+', '30*2+5'));
