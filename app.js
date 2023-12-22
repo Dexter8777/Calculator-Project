@@ -76,14 +76,15 @@ const clear = document.querySelector('.clear');
 equals.addEventListener('click', ()=>{
     resultsDisplay.replaceChildren();
     resultsDisplay.append(operate(operator, displayValue));
-    displayValue = [];
-    operator = [];
+    displayValue = '';
+    displayValue += resultsDisplay.textContent;
+    operator = '';
 })
 
 clear.addEventListener('click', ()=>{
     resultsDisplay.replaceChildren();
-    displayValue = [];
-    operator = [];
+    displayValue = '';
+    operator = '';
 })
 
 const operators = {
