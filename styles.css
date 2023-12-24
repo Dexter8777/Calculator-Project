@@ -48,9 +48,15 @@ h1{
 
 .extra_buttons{
     display:flex;
+    flex-direction: column;
     flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
+.extra_buttons .extra {
+    width: 100%;
+}
 
 .grow{
     flex-grow: 1;
