@@ -107,11 +107,11 @@ const operate = function(ops, displayContent){
     let finalResult = 0;
 
     // removes all operators leaving only the numbers
-    displayContent = displayContent.split(/[*-+/]/g);
+    displayContent = displayContent.split(/[\/\+\-\*]/g);
     ops = ops.split('');
 
     const newNumArray = displayContent.map(num => {
-        return Number(num);
+        return parseFloat(num);
     })
    
     /* Loops through each operator using the first operator to perform the calculation
