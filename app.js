@@ -105,7 +105,7 @@ const operate = function(ops, numbers){
     let finalResult = 0;
 
     // remove all characters that are not numbers
-    numbers = numbers.split(/[^\d]/g);
+    numbers = numbers.split(/[+-/*]/g);
     ops = ops.split('');
 
     const newNumArray = numbers.map(num => {
@@ -128,7 +128,6 @@ const operate = function(ops, numbers){
     if (finalResult == 'Infinity') finalResult = 'ERROR';
     return finalResult;
 };
-
 
 
 console.log('Operate Function testing\n');
