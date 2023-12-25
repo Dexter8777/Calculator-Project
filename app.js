@@ -101,14 +101,14 @@ const operators = {
 };
 
 
-const operate = function(ops, numbers){
+const operate = function(ops, displayContent){
     let finalResult = 0;
 
-    // remove all characters that are not numbers
-    numbers = numbers.split(/[+-/*]/g);
+    // removes all operators leaving only the numbers
+    displayContent = displayContent.split(/[+-/*]/g);
     ops = ops.split('');
 
-    const newNumArray = numbers.map(num => {
+    const newNumArray = displayContent.map(num => {
         return Number(num);
     })
 
@@ -116,7 +116,7 @@ const operate = function(ops, numbers){
     on the first two numbers,
 
     Will then remove those first two numbers and append the result of the calculation
-    to be used in the next calculation with the next number.
+    to the start of the list to be used in the next calculation with the next number.
     */
     
     ops.forEach((op) => {
