@@ -51,6 +51,15 @@ numButtons.forEach((btn) => {
     })
 })
 
+
+decimalPoint.addEventListener('click', ()=>{
+    decimalPoint.setAttribute('disabled', '');
+    displayValue += '.'
+    resultsDisplay.append('.');
+})
+        
+
+
 operatorButtons.forEach((btn) => {
     btn.addEventListener('click', ()=>{
 
@@ -66,6 +75,7 @@ operatorButtons.forEach((btn) => {
         }
         
         resultsDisplay.append(btn.textContent);
+        decimalPoint.removeAttribute('disabled');
     })
 })
 
@@ -87,6 +97,7 @@ equals.addEventListener('click', ()=>{
     displayValue = '';
     displayValue += resultsDisplay.textContent;
     operator = '';
+    decimalPoint.removeAttribute('disabled');
 })
 
 
@@ -94,6 +105,7 @@ clear.addEventListener('click', ()=>{
     resultsDisplay.replaceChildren();
     displayValue = '';
     operator = '';
+    decimalPoint.removeAttribute('disabled');
 })
 
 const operators = {
