@@ -119,7 +119,7 @@ const operators = {
 
 const operate = function(ops, displayContent){
     let finalResult = 0;
-
+    let decimalFinalResult;
     // removes all operators leaving only the numbers
     displayContent = displayContent.split(/[\/\+\-\*]/g);
     ops = ops.split('');
@@ -141,8 +141,16 @@ const operate = function(ops, displayContent){
         newNumArray.unshift(finalResult);
     });
 
-    if (finalResult == 'Infinity') finalResult = 'ERROR';
-    return finalResult;
+    if(finalResult.toString().includes('.')){
+        decimalFinalResult = finalResult.toString().split('.');
+    };
+
+    if (finalResult == 'Infinity'){
+        finalResult = 'ERROR';
+    } else if(decimalFinalResult[1].length > 3){
+        finalResult = finalResult.toFixed(1);
+    }
+    return finalResult
 };
 
 
