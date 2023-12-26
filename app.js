@@ -48,6 +48,7 @@ numButtons.forEach((btn) => {
     btn.addEventListener('click', ()=>{
         displayValue += btn.textContent;
         resultsDisplay.append(btn.textContent);
+        decimalPoint.removeAttribute('disabled');
     })
 })
 
