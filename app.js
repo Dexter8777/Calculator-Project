@@ -87,6 +87,13 @@ operatorButtons.forEach((btn) => {
 const equals = document.querySelector('.equals');
 const clear = document.querySelector('.clear');
 
+const operators = {
+    '+' : add,
+    '-' : subtract,
+    '*' : multiply,
+    '/' : divide
+};
+
 equals.addEventListener('click', ()=>{
     resultsDisplay.replaceChildren();
 
@@ -109,12 +116,7 @@ clear.addEventListener('click', ()=>{
     decimalPoint.removeAttribute('disabled');
 })
 
-const operators = {
-    '+' : add,
-    '-' : subtract,
-    '*' : multiply,
-    '/' : divide
-};
+
 
 
 const operate = function(ops, displayContent){
@@ -154,5 +156,3 @@ const operate = function(ops, displayContent){
 };
 
 
-console.log('Operate Function testing\n');
-console.log(operate('*+', '30*2+5'));
