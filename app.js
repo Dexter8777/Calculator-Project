@@ -150,9 +150,9 @@ const operate = function(ops, displayContent){
         decimalFinalResult = finalResult.toString().split('.');
         if(decimalFinalResult[1].length > 3){
             finalResult = finalResult.toFixed(1);
-    } else if (finalResult == 'Infinity'){
+    }} else if (finalResult == 'Infinity'){
         finalResult = 'ERROR';
-    }};
+    };
 
     return finalResult
 };
