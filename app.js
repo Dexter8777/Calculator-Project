@@ -86,13 +86,13 @@ operatorButtons.forEach((btn) => {
 
 const equals = document.querySelector('.equals');
 const clear = document.querySelector('.clear');
-
 const operators = {
     '+' : add,
     '-' : subtract,
     '*' : multiply,
     '/' : divide
 };
+
 
 equals.addEventListener('click', ()=>{
     resultsDisplay.replaceChildren();
@@ -117,8 +117,6 @@ clear.addEventListener('click', ()=>{
 })
 
 
-
-
 const operate = function(ops, displayContent){
     let finalResult = 0;
     let decimalFinalResult;
@@ -127,7 +125,12 @@ const operate = function(ops, displayContent){
     ops = ops.split('');
 
     const newNumArray = displayContent.map(num => {
-        return parseFloat(num);
+        if(num.includes('.')){
+            return parseFloat(num);
+        } else {
+            return Number(num);
+        }
+        
     })
    
     /* Loops through each operator using the first operator to perform the calculation
@@ -145,14 +148,11 @@ const operate = function(ops, displayContent){
 
     if(finalResult.toString().includes('.')){
         decimalFinalResult = finalResult.toString().split('.');
-    };
-
-    if (finalResult == 'Infinity'){
+        if(decimalFinalResult[1].length > 3){
+            finalResult = finalResult.toFixed(1);
+    } else if (finalResult == 'Infinity'){
         finalResult = 'ERROR';
-    } else if(decimalFinalResult[1].length > 3){
-        finalResult = finalResult.toFixed(1);
-    }
+    }};
+
     return finalResult
 };
-
-
