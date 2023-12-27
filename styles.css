@@ -47,6 +47,10 @@ h1{
     gap: 5px;
 }
 
+.num, .extra, .decimal{
+    background-color:#d3d3d3;
+}
+
 .operator_buttons{
     display: flex;
     flex-direction: column;
