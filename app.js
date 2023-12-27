@@ -48,7 +48,6 @@ numButtons.forEach((btn) => {
     btn.addEventListener('click', ()=>{
         displayValue += btn.textContent;
         resultsDisplay.append(btn.textContent);
-        decimalPoint.removeAttribute('disabled');
     })
 })
 
@@ -103,8 +102,11 @@ equals.addEventListener('click', ()=>{
     };
     
     displayValue = '';
-    displayValue += resultsDisplay.textContent;
     operator = '';
+
+    // Store the result of the previous calculation
+    displayValue += resultsDisplay.textContent;
+   
     decimalPoint.removeAttribute('disabled');
 })
 
@@ -120,6 +122,7 @@ clear.addEventListener('click', ()=>{
 const operate = function(ops, displayContent){
     let finalResult = 0;
     let decimalFinalResult;
+    
     // removes all operators leaving only the numbers
     displayContent = displayContent.split(/[\/\+\-\*]/g);
     ops = ops.split('');
