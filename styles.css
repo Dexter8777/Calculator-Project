@@ -47,8 +47,12 @@ h1{
     gap: 5px;
 }
 
-.num, .extra, .decimal{
+.num, .decimal{
     background-color:#d3d3d3;
+}
+
+.extra{
+    background-color: #8d908e;
 }
 
 .operator_buttons{
