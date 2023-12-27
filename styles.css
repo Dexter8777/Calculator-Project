@@ -16,6 +16,7 @@ h1{
     border-radius: 10px;
     margin: auto;
     gap: 20px;
+    background-color: #454545;
 }
 
 .result-display{
