@@ -3,10 +3,13 @@ body{
     background-color: #545655;
 }
 
-h1{
+h1, footer{
     text-align: center;
-    font-size: 50px;
     color: #FAF9F6;
+}
+
+h1{
+    font-size: 50px;
 }
 
 .calculator-container{
