@@ -17,7 +17,8 @@ footer{
 }
 
 .calculator-container{
-    border: 2px solid #d3d3d3;
+    /* border: 2px solid #d3d3d3; */
+    box-shadow: 0 0 10px black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,8 +32,8 @@ footer{
 }
 
 .result-display{
-    border: 2px solid #d3d3d3;
     display: flex;
+    box-shadow: 0 0 5px black;
     width: 325px;
     height: 80px;
     border-radius: 10px;
