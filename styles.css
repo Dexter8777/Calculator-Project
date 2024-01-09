@@ -106,4 +106,9 @@ footer{
     cursor: pointer;
 }
 
+.btn:active{
+    transform: scale(.9);
+    box-shadow: 0 3px 15px -2px;
+}
+
 
